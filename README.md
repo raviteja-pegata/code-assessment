@@ -73,9 +73,9 @@ Based on the action (BOOK or CANCEL), the respective function (book_seat or canc
 Outputs SUCCESS or FAIL based on the operation result.
 
 
- 
-Error Handling:-
-_______________
+**************** 
+Error Handling:
+****************
 
 The system is built with robust error handling to ensure that invalid operations do not crash the program and that the user is informed of the exact reason for failure.
 
