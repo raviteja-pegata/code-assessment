@@ -72,30 +72,31 @@ b) Behavior:
 Based on the action (BOOK or CANCEL), the respective function (book_seat or cancel_seat) is called.
 Outputs SUCCESS or FAIL based on the operation result.
 
- Error Handling:
-    If an invalid number of arguments is provided, the script prints "FAIL".
-    Errors related to seat booking or cancellation (e.g., already booked, invalid seat, gaps in the layout) are handled and reported via specific messages (e.g., "FAIL - Seat(s) already booked" or "FAIL - Invalid seat or layout").
-    Error Handling
-    The system is built with robust error handling to ensure that invalid operations do not crash the program and that the user is informed of the exact reason for failure.
 
-    Invalid Number of Arguments:
+ 
+Error Handling:-
+_______________
 
-    If the script is not provided exactly 4 arguments, it immediately prints "FAIL" and exits. This ensures the correct usage of the system.
-    Invalid Seat Identifiers:
+The system is built with robust error handling to ensure that invalid operations do not crash the program and that the user is informed of the exact reason for failure.
 
-    The function seat_to_index converts seat identifiers (like A1) to row and seat indices. If an invalid seat is provided (e.g., a seat outside the range), the system catches IndexError or ValueError and returns "FAIL". This ensures no invalid seat numbers cause unexpected crashes.
-    Double Booking:
+Invalid Number of Arguments:
 
-    If the user tries to book a seat that is already reserved, the book_seat function detects this and returns "FAIL - Seat(s) already booked". This prevents multiple bookings of the same seat.
-    Booking Over Gaps:
+If the script is not provided exactly 4 arguments, it immediately prints "FAIL" and exits. This ensures the correct usage of the system.
+Invalid Seat Identifiers:
 
-    If the user tries to book seats across gaps (represented by _), the system prevents the operation by returning "FAIL - Invalid seat or layout". This ensures that the booking remains consistent with the seat layout.
-    Cancelling Unbooked Seats:
+The function seat_to_index converts seat identifiers (like A1) to row and seat indices. If an invalid seat is provided (e.g., a seat outside the range), the system catches IndexError or ValueError and returns "FAIL". This ensures no invalid seat numbers cause unexpected crashes.
+Double Booking:
 
-    The cancel_seat function checks whether the seat is already booked. If the seat wasn't booked, it returns "FAIL - Seat wasn't reserved", preventing the user from canceling an unbooked seat.
-    Seat Layout Integrity:
+If the user tries to book a seat that is already reserved, the book_seat function detects this and returns "FAIL - Seat(s) already booked". This prevents multiple bookings of the same seat.
+Booking Over Gaps:
 
-    The system ensures that any booking or cancellation that crosses gaps in the layout is prevented. This prevents invalid bookings from breaking the seat layout structure.
+If the user tries to book seats across gaps (represented by _), the system prevents the operation by returning "FAIL - Invalid seat or layout". This ensures that the booking remains consistent with the seat layout.
+Cancelling Unbooked Seats:
+
+The cancel_seat function checks whether the seat is already booked. If the seat wasn't booked, it returns "FAIL - Seat wasn't reserved", preventing the user from canceling an unbooked seat.
+Seat Layout Integrity:
+
+The system ensures that any booking or cancellation that crosses gaps in the layout is prevented. This prevents invalid bookings from breaking the seat layout structure.
 
 
 
