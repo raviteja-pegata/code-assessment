@@ -99,8 +99,9 @@ Seat Layout Integrity:
 The system ensures that any booking or cancellation that crosses gaps in the layout is prevented. This prevents invalid bookings from breaking the seat layout structure.
 
 
-
+##############################
 Example usage
+###############################
 
 # Book 2 seats starting from A1
 python3 seat_booking.py BOOK A1 2
