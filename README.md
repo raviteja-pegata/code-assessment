@@ -72,7 +72,7 @@ b) Behavior:
 Based on the action (BOOK or CANCEL), the respective function (book_seat or cancel_seat) is called.
 Outputs SUCCESS or FAIL based on the operation result.
 
-c) Error Handling:
+ Error Handling:
     If an invalid number of arguments is provided, the script prints "FAIL".
     Errors related to seat booking or cancellation (e.g., already booked, invalid seat, gaps in the layout) are handled and reported via specific messages (e.g., "FAIL - Seat(s) already booked" or "FAIL - Invalid seat or layout").
     Error Handling
